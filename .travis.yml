@@ -1,18 +1,14 @@
-language: cpp
+sudo: required
+dist: trusty
+language: generic
 compiler:
   - gcc
-  - clang
+env:
+  global:
+    - UPSTREAM_WORKSPACE=file
+  matrix:
+    - ROS_DISTRO="kinetic" ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu
 install:
-  - sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu precise main" > /etc/apt/sources.list.d/ros-latest.list'
-  - wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
-  - sudo apt-get update
-  - sudo apt-get install ros-groovy-catkin
-  - sudo apt-get install ros-groovy-serial
-  - source /opt/ros/groovy/setup.bash
-  - sudo apt-get install python-rosdep
-  - sudo rosdep init
-  - rosdep update
-  - rosdep install --from-paths . --ignore-src --rosdistro groovy -y
+  - git clone https://github.com/ros-industrial/industrial_ci.git .ci_config
 script:
-  - make
-  - make test
+  - source .ci_config/travis.sh
