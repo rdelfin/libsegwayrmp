@@ -1,4 +1,4 @@
-maguey (0.2.10) xenial; urgency=low
+libsegwayrmp (0.2.10) xenial; urgency=low
 
 * The segwayrmp_gui is now installed so it is available from binaries
 
