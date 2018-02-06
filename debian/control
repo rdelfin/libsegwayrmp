@@ -1,0 +1,16 @@
+Source: libsegwayrmp
+Section: devel
+Priority: optional
+Maintainer: Piyush Khandelwal <piyushk@gmail.com>
+Build-Depends: cmake, build-essential, python-catkin-pkg, python-catkin-tools, libboost-all-dev, libqt4-dev, ros-kinetic-serial, libsdl1.2-dev
+Homepage: https://github.com/utexas-bwi/libsegwayrmp
+
+Package: libsegwayrmp
+Architecture: any
+Depends: 
+Description: This is a cross-platform, open
+ source interface to Segway's Robotic Mobile
+ Platforms. It provides access to the interface
+ of the RMP50, 100, 200, and 400 series via
+ either serial rs-232 (VCP) or ftdi usb mode
+ (D2XX).

@@ -1,0 +1,5 @@
+maguey (0.2.10) xenial; urgency=low
+
+* The segwayrmp_gui is now installed so it is available from binaries
+
+-- Ricardo Delfin Garcia <ricardo.delfin.garcia@gmail.com>  Mon, 5 Feb 2018 23:12:11 -0600
